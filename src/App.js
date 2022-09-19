@@ -34,6 +34,12 @@ function App() {
       // Set default atmosphere style
       map.current.setFog({})
 
+      // Add fullscreen control
+      map.current.addControl(new mapboxgl.FullscreenControl())
+
+      // Add zoom and rotation controls to the map.
+      map.current.addControl(new mapboxgl.NavigationControl());
+
       // Add tileset source for airways data
       map.current.addSource("mapbox-airways", {
         type: "vector",
